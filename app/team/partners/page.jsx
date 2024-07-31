@@ -109,6 +109,7 @@ const PartnersSection = () => {
             <div className="inline-flex">
               {[...Array(Math.ceil(teamMembers.length / membersPerPage)).keys()].map((number) => (
                 <button
+                  aria-label="Number"
                   key={number + 1}
                   onClick={() => paginate(number + 1)}
                   className={`mx-1 px-4 py-2 ${currentPage === number + 1 ? 'bg-[#7F5283] text-white' : 'bg-white text-[#7F5283]'}`}

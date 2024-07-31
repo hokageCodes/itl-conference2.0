@@ -144,17 +144,17 @@ const MultiStepForm = () => {
   
         <div className="flex justify-between mt-8">
           {currentStep > 0 && (
-            <button onClick={previousStep} className="bg-ctaBg hover:bg-gray-400 text-bg font-bold py-2 px-4 rounded">
+            <button aria-label="Back" onClick={previousStep} className="bg-ctaBg hover:bg-gray-400 text-bg font-bold py-2 px-4 rounded">
               Back
             </button>
           )}
           {currentStep < formSteps.length - 1 && (
-            <button onClick={nextStep} className="bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded">
+            <button aria-label="Next" onClick={nextStep} className="bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded">
               Next
             </button>
           )}
           {currentStep === formSteps.length - 1 && (
-            <button onClick={handleSubmit} className={`bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={loading}>
+            <button aria-label="Submit" onClick={handleSubmit} className={`bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={loading}>
               {loading ? 'Loading...' : 'Submit'}
             </button>
           )}
@@ -169,7 +169,7 @@ const MultiStepForm = () => {
             <div className="bg-white p-8 rounded shadow-lg">
               <h2 className="text-xl font-bold mb-4">Success!</h2>
               <p className="text-gray-700 mb-4">Your nomination has been submitted successfully.</p>
-              <button onClick={() => setSuccess(false)} className="bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded">
+              <button aria-label="Back" onClick={() => setSuccess(false)} className="bg-ctaBg hover:bg-ctaHover text-white font-bold py-2 px-4 rounded">
                 <a href="/">Go Back Home</a>
               </button>
             </div>

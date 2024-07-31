@@ -25,7 +25,7 @@ const SuccessComponent = ({ onBack }) => (
     </div>
     <div className="text-center text-lg font-semibold text-green-500">Thank you for submitting!</div>
     <div className="text-center mt-4">
-      <button onClick={onBack} className="text-blue-500 underline">Go back home</button>
+      <button aria-label="Back" onClick={onBack} className="text-blue-500 underline">Go back home</button>
     </div>
   </div>
 );
@@ -189,6 +189,7 @@ const PreRegister = () => {
                       </div>
                     )}
                     <button
+                      aria-label="Submit"
                       type="submit"
                       className={`w-full py-2 px-4 bg-textPrimary text-white hover:bg-ctaHover rounded focus:outline-none ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
                       disabled={loading}

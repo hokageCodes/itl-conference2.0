@@ -105,6 +105,7 @@ const PlanningTeamSection = () => {
             <div className="pagination inline-flex space-x-2">
               {[...Array(Math.ceil(teamMembers.length / membersPerPage)).keys()].map((number) => (
                 <button
+                  aria-label="Number"
                   key={number + 1}
                   onClick={() => paginate(number + 1)}
                   className={`px-4 py-2 rounded-lg border ${currentPage === number + 1 ? 'bg-[#3D3C42] text-white' : 'bg-white text-[#3D3C42] border-[#3D3C42]'}`}

@@ -65,11 +65,11 @@ const SpeakersPage = () => {
         </div>
         {speakers.length > ITEMS_PER_PAGE && (
           <div className="flex justify-between items-center mt-8">
-            <button onClick={handlePreviousPage} disabled={currentPage === 1} className="bg-gray-300 px-4 py-2 rounded-md disabled:opacity-50">
+            <button aria-label="Prev" onClick={handlePreviousPage} disabled={currentPage === 1} className="bg-gray-300 px-4 py-2 rounded-md disabled:opacity-50">
               Previous
             </button>
             <p>Page {currentPage} of {totalPages}</p>
-            <button onClick={handleNextPage} disabled={currentPage === totalPages} className="bg-gray-300 px-4 py-2 rounded-md disabled:opacity-50">
+            <button aria-label="Next" onClick={handleNextPage} disabled={currentPage === totalPages} className="bg-gray-300 px-4 py-2 rounded-md disabled:opacity-50">
               Next
             </button>
           </div>

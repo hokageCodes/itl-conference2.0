@@ -45,7 +45,7 @@ const Navbar = () => {
           <a href="/pre-register" className="font-black">Registration</a>
           <a href="/speakers" className="font-black">Speakers</a>
           <div className="relative">
-            <button onClick={toggleDropdown} className="font-black">Team</button>
+            <button aria-label="Toggle" onClick={toggleDropdown} className="font-black">Team</button>
             {isDropdownOpen && (
               <div className="w-32 absolute mt-2 bg-white border rounded shadow-lg">
                 <a href="/team/leadership" className="block px-4 py-2 text-sm font-bold hover:bg-gray-200">Leadership Team</a>
@@ -63,7 +63,7 @@ const Navbar = () => {
         </div>
 
         <div className="md:hidden">
-          <button onClick={toggleHamburger} className="outline-none">
+          <button aria-label="Toggle" onClick={toggleHamburger} className="outline-none">
             {isOpen ? (
               <svg className="w-16 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -82,7 +82,7 @@ const Navbar = () => {
         <a href="/pre-register" className="block py-2 px-4 text-sm font-bold">Registration</a>
         <a href="/speakers" className="block py-2 px-4 text-sm font-bold">Speakers</a>
         <div className="block py-2 px-4 text-sm font-bold">
-          <button onClick={toggleDropdown} className="w-full text-left">Team</button>
+          <button aria-label="Toggle" onClick={toggleDropdown} className="w-full text-left">Team</button>
           {isDropdownOpen && (
             <div className="pl-4 mt-2">
               <a href="/team/leadership" className="block py-2 text-sm font-bold">Leadership Team</a>

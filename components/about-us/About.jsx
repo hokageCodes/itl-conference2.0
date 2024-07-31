@@ -30,7 +30,7 @@ const AboutSection = () => {
                 The ITL Conference is the largest gathering of Internationally Trained Lawyers (ITLs) in Canada. The Conference will feature different legal professionals, regulators, change makers, and other stakeholders committed to supporting ITLs in their legal practice journey in Canada. The ITL Conference is a joint effort of our partner organisations: The ITL Network, Global Lawyers of Canada, Joy ITL Initiative and ITL NCA Networks.
               </p>
               <div>
-                <button className="bg-ctaBg text-white hover:bg-ctaHover rounded-md px-6 py-3 transition duration-300 ease-in-out">
+                <button aria-label="Submit" className="bg-ctaBg text-white hover:bg-ctaHover rounded-md px-6 py-3 transition duration-300 ease-in-out">
                   <a href="/pre-register">Pre Register</a>
                 </button>
               </div>

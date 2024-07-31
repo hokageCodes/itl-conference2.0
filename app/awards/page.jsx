@@ -120,7 +120,8 @@ const AwardsSection = () => {
                 ) : (
                   <p className="mt-2 text-center">{award.description.slice(0, 100)}...</p>
                 )}
-                <button
+                <button 
+                  aria-label="readmore/less"
                   onClick={() => toggleExpand(award.id)}
                   className="border-none bg-none text-textPrimary font-bold underline cursor-pointer mt-2 focus:outline-none"
                 >
