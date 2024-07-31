@@ -1,9 +1,11 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-import VideoBackground from '../video-bg/VideoBackground';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import styled from 'styled-components';
+
+// Lazy load the VideoBackground component
+const VideoBackground = lazy(() => import('../video-bg/VideoBackground'));
 
 const HeroContainer = styled.div`
   position: relative;
@@ -133,7 +135,9 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <VideoBackground src="/assets/hero-video.mp4" />
+      <Suspense fallback={<div>Loading video...</div>}>
+        <VideoBackground src="/assets/hero-video.mp4" />
+      </Suspense>
       <ContentContainer>
         <TextContainer>
           <h1 className='hero-deco text-5xl font-black'>THE ITL CONFERENCE &#39;25</h1>
