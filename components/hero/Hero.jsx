@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -48,16 +48,11 @@ const TextContainer = styled.div`
 
   h1 {
     max-width: 500px;
-    // border: 1px solid red;
   }
 
   @media (max-width: 768px) {
     text-align: center; // Center text on mobile
     align-items: center; // Center items horizontally on mobile
-  }
-  @media (max-width: 375px) {
-    text-align: center;
-    align-items: center;
   }
 
   h1, p { 
@@ -135,8 +130,8 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <Suspense fallback={<div>Loading video...</div>}>
-        <VideoBackground src="/assets/hero-video.mp4" />
+      <Suspense fallback={<div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Loading video...</div>}>
+        <VideoBackground />
       </Suspense>
       <ContentContainer>
         <TextContainer>

@@ -4,7 +4,6 @@ import Hero from "@/components/hero/Hero";
 import PartnersSection from "@/components/partners/PartnersSection";
 import SpeakerIntroSection from "@/components/speaker-intro/SpeakerIntroSection";
 import WhyAttend from "@/components/why-attend/WhyAttend";
-import Image from "next/image";
 
 export default function Home() {
   return (

@@ -1,14 +1,39 @@
-"use client"
 import React from 'react';
 
-const VideoBackground = ({ src }) => {
+const VideoBackground = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-      <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-        <source src={src} />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        zIndex: -1,
+      }}
+    >
+      <source src="/assets/hero-video.mp4" type="video/mp4" />
+      <track
+        src="/assets/captions_en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English"
+        default
+      />
+      <track
+        src="/assets/captions_es.vtt"
+        kind="captions"
+        srclang="es"
+        label="Español"
+      />
+      Your browser does not support the video tag.
+    </video>
   );
 };
 

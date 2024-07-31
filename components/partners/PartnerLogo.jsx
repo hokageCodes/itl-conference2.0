@@ -14,8 +14,7 @@ const PartnerLogo = ({ name, logoSrc, url }) => {
         alt={name}
         width={140}
         height={80}
-        style={{ objectFit: 'contain' }}
-        layout="intrinsic" // You can use "responsive" if you want the image to scale with the viewport
+        style={{ objectFit: 'contain' }} // Ensure the image fits well within the container
       />
     </a>
   );

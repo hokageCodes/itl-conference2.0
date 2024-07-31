@@ -20,7 +20,7 @@ const partners = [
   },
   {
     name: 'Google',
-    logoSrc: '/assets/svgs/4.png',                                                                                                                                                                                                                                                        
+    logoSrc: '/assets/svgs/4.png',
     url: 'https://google.com',
   },
   // Add more partners as needed
